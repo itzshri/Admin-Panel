@@ -21,6 +21,8 @@
     --box2-color: #00a36c;
     --box3-color: #00a36c;
     --title-icon-color: #fff;
+    --edit-button: #00a36c;
+    --delete-button: #a30000;
     
     /* ====== Transition ====== */
     --tran-05: all 0.5s ease;
@@ -44,6 +46,10 @@ body.dark{
     --box2-color: #00a36c;
     --box3-color: #00a36c;
     --title-icon-color: #00a36c;
+    --edit-button: #00a36c;
+    --delete-button: #a30000;
+
+
 }
 /* === Custom Scroll Bar CSS === */
 ::-webkit-scrollbar {
@@ -373,6 +379,43 @@ nav.close ~ .dashboard .top{
     margin-top: 20px;
     white-space: nowrap;
     color: var(--text-color);
+}
+
+/*** Button ***/
+.activity-data .data .edit-delete{
+    display: flex;
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 20px;
+    white-space: nowrap;
+    letter-spacing: 0.5px;  
+    align-content: space-between;  
+}
+
+.edit-delete .edit{
+    color: var(--edit-button);
+    text-decoration: none;
+}
+
+.edit-delete .delete{
+    color: var(--delete-button);
+    text-decoration: none;
+}
+
+.activity-data .data .details-btn-list {
+    display: flex;
+    line-height: 2;
+    margin-top: 15px;
+    padding: 0.1rem 0.5rem;
+    font-size: 13px;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 10px;
+    background-color: rgba(220, 0, 0, 1);
+    background-image: linear-gradient(to top left, rgba(0,0,0,0.2), rgba(0,0,0,0.2) 30%, rgba(0,0,0,0));
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.6), inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+
 }
 
 @media (max-width: 1000px) {
