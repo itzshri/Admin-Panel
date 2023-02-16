@@ -354,37 +354,44 @@ nav.close ~ .dashboard .top{
     background-color: var(--box3-color);
 }
 
-.dash-content .activity .activity-data{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.dash-content.activity.activitydata{
     width: 100%;
 }
-.activity .activity-data{
-    display: flex;
+.dash-content .activity .activity-data{
+    width: 100%;
+    border-collapse: collapse;    
 }
-.activity-data .data{
-    display: flex;
-    flex-direction: column;
-    margin: 0 15px;
+
+.activity-data td, .activity-data th{
+    padding: 5px 15px;
+    
+    flex-direction: row;
+    text-align: center;
 }
-.activity-data .data-title{
+
+.activity-data th{
     font-size: 20px;
+    
     font-weight: 500;
     color: var(--text-color);
 }
-.activity-data .data .data-list{
-    font-size: 18px;
+
+.activity-data td{
+    font-size: 17px;
     font-weight: 400;
+    padding: 1rem 1em;
     margin-top: 20px;
     white-space: nowrap;
     color: var(--text-color);
 }
 
+
 /*** Button ***/
-.activity-data .data .edit-delete{
+.activity-data .edit-delete{
     display: flex;
-    font-size: 18px;
+    color: #ccc;
+    align-items: center;
+    font-size: 5px;
     font-weight: 400;
     margin-top: 20px;
     white-space: nowrap;
@@ -393,29 +400,36 @@ nav.close ~ .dashboard .top{
 }
 
 .edit-delete .edit{
+    align-items: flex-start;
     color: var(--edit-button);
+    padding: 0 5px;
+
     text-decoration: none;
 }
 
 .edit-delete .delete{
+    padding: 0 5px;
     color: var(--delete-button);
     text-decoration: none;
 }
 
-.activity-data .data .details-btn-list {
-    display: flex;
-    line-height: 2;
-    margin-top: 15px;
-    padding: 0.1rem 0.5rem;
+.activity-data .details-btn-list {
+    margin-top: 10px;
+    cursor: pointer;
+    padding: 4px 10px;
     font-size: 13px;
     text-align: center;
     color: #fff;
-    text-shadow: 1px 1px 1px #000;
-    border-radius: 10px;
-    background-color: rgba(220, 0, 0, 1);
-    background-image: linear-gradient(to top left, rgba(0,0,0,0.2), rgba(0,0,0,0.2) 30%, rgba(0,0,0,0));
-    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.6), inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    background-color: rgb(138, 129, 129);  
+    outline: none;
+    border: none;
 
+}
+
+.activity-data .details-btn-list:hover{
+    background-color: #00a36c;
+    color: #fff;
 }
 
 @media (max-width: 1000px) {
@@ -457,7 +471,7 @@ nav.close ~ .dashboard .top{
         left: 250px;
         width: calc(100% - 250px);
     }
-    .activity .activity-data{
+    .activity .activitydata    {
         overflow-X: scroll;
     }
 }
